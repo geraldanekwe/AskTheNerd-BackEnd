@@ -5,7 +5,7 @@ var MD5 = require("MD5");
 var slug = require("slug");
 
 mongoose.connect(process.env.MONGOLAB_URI);
-// mongoose.connect('mongodb://localhost/test');
+
 
 // var User = mongoose.model("users", { name: String });
 // var user1 = new User({name: 'from Mongoos'});
@@ -48,11 +48,6 @@ var Question = mongoose.model("Question", {
     }
   }]
 });
-
-// temp500Qs = Array.apply(null, Array(500)).map(function(n, i) { return { body: "Q" + i, email: 'test@test.com', slug: "q-" + i, gravatarUrl: "test" } });
-// Question.create(temp500Qs, function(err) {
-//   console.error(err);
-// });
 
 Question.on('index', function(err) {
   if (err) {
