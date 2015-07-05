@@ -4,24 +4,24 @@
  * Module dependencies.
  */
 
-console.log(process.argv);
+// console.log(process.argv);
 
-if (process.argv[2]) {
-  console.log("Action");
-  switch(process.argv[2]) {
-    case "cleardb":
-      var mongoose = require('mongoose');
-      mongoose.connect(process.env.MONGOLAB_URI);
-      var Question = mongoose.model("Question", {});
-      Question.remove({}, function(err) {
-        process.exit();
-      });
-      break;
-    default:
-      console.log("Unknown action");
-  }
-  return;
-}
+// if (process.argv[2]) {
+//   console.log("Action");
+//   switch(process.argv[2]) {
+//     case "cleardb":
+//       var mongoose = require('mongoose');
+//       mongoose.connect(process.env.MONGOLAB_URI);
+//       var Question = mongoose.model("Question", {});
+//       Question.remove({}, function(err) {
+//         process.exit();
+//       });
+//       break;
+//     default:
+//       console.log("Unknown action");
+//   }
+//   return;
+// }
 
 
 var app = require('../app');
